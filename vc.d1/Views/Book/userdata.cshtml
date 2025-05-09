@@ -1,0 +1,37 @@
+﻿
+
+@model Addbook_Dto
+
+
+<form asp-action="userdata" method="post">
+    <div>
+    <label for="name">User Name:</label><br>
+    <input asp-for="Name" id="name" />
+        <span asp-validation-for="Name" class="text-danger d-block w-100"></span>
+    </div>
+    <br />
+    <div>
+    <label for="mail">Email:</label><br>
+    <input asp-for="Email" id="mail" />
+        <span asp-validation-for="Email" class="text-danger  d-block w-100"></span>
+
+
+    </div>
+    <div>
+        <br />
+
+    <label for="password">Password:</label><br>
+    <input asp-for="Password" id="password" type="password" />
+        <span asp-validation-for="Password" class="text-danger  d-block w-100"></span>
+
+
+    </div>
+    <br />
+    <input type="submit" value="Submit">
+
+</form>
+
+
+@section scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

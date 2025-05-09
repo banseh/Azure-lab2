@@ -1,0 +1,47 @@
+﻿
+@* <h1> hello banseh</h1> *@
+
+@model List<book>
+
+@* <p>Totalcount: @Model.Count</p> *@
+
+
+@* @{ *@
+@* 	var totalcnt = Model.Count; *@
+@* } *@
+@* <h1>@totalcnt</h1> *@
+
+@* @Html.Raw(totalcnt >= 10 ? "<h2>biglist</h2>" : "<h3>smalllist</h3>") *@
+
+@* @if(Model.First().Price>10){ *@
+@* 	<p1>tooooo expensive</p1> *@
+@* } *@
+
+<h1 style="text-align:center"> Hello From Library</h1>
+<br />
+
+<table class="table table-striped table-hover table-bordered text-center">
+    <thead>
+        <tr>
+            <th>Book Name</th>
+            <th>Publisher && Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>
+            <p> @book.Name</p>
+                </td>
+                <td>
+                    @Html.Raw(book.ImageMarkup)
+                    <p> @book.Id</p>
+
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+

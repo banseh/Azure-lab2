@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\vc.d1.props" />
+</Project>
